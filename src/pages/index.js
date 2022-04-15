@@ -31,6 +31,7 @@ const Index = () => (
     <Box>
       <Footer />
     </Box>
+    
   </Box>
 );
 

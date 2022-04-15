@@ -2,6 +2,7 @@ import { Box, Text, Divider, Grid } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 import { Link } from "@chakra-ui/react";
 import MoonButtonIcon from "../../images/brand/moon.svg";
+import SunIconButton from "../../images/brand/sun.svg";
 import { useColorModeValue, useColorMode } from "@chakra-ui/react";
 
 export const WorksHeader = () => {
@@ -9,6 +10,7 @@ export const WorksHeader = () => {
   const bg = useColorModeValue("#000", "#fff");
   const color = useColorModeValue("#fff", "#000");
   const sunMoonSwitch = useColorModeValue(SunIconButton, MoonButtonIcon);
+  const switchYellowBulueColor = useColorModeValue("#ECC94B", "#63B3ED");
 
   return (
     <Box
@@ -25,11 +27,11 @@ export const WorksHeader = () => {
       <Link href="/" _hover={{ textDecoration: "none" }}>
         <Text fontSize={44} fontFamily="Roboto" fontWeight="bold">
           Mp
-          <Text as="span" color="#ECC94B">
+          <Text as="span" color={switchYellowBulueColor}>
             .
           </Text>
           2021{" "}
-          <Text as="span" color="#ECC94B">
+          <Text as="span" color={switchYellowBulueColor}>
             /{" "}
           </Text>
           <Text as="span" fontSize={32}>
@@ -37,7 +39,12 @@ export const WorksHeader = () => {
           </Text>
         </Text>
       </Link>
-      <Divider w={96} borderColor="#ECC94B" opacity="1" ml={14} />
+      <Divider
+        w={96}
+        borderColor={switchYellowBulueColor}
+        opacity="1"
+        ml={14}
+      />
       <Grid templateColumns="repeat(3, 1fr)" gap={6} ml={14} mr={14}>
         <Link href="/makeWebsitePage" _hover={{ textDecoration: "none" }}>
           <Text

@@ -2,7 +2,7 @@ import { Box, Text, Divider } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
 import penguinIcon from "../images/brand/penguinIcon.png";
-import arrowIcon from "../images/brand/chevron_big_up.svg";
+// import arrowIcon from "../images/brand/chevron_big_up.svg";
 import { useColorModeValue, useColorMode } from "@chakra-ui/react";
 
 export const TopAbout = () => {
@@ -11,6 +11,8 @@ export const TopAbout = () => {
   const color = useColorModeValue("#fff", "#000");
   const border = useColorModeValue("1px solid #000", "1px solid #fff");
   const icon = useColorModeValue("#fff", "#000");
+  const switchYellowBulueColor = useColorModeValue("#ECC94B", "#63B3ED");
+
   return (
     <Box
       bg="#000"
@@ -22,7 +24,12 @@ export const TopAbout = () => {
       bg={bg}
     >
       <Box textAlign="center">
-        <Text as="u" fontSize="3xl" color="#ECC94B" fontFamily="Rajdhani">
+        <Text
+          as="u"
+          fontSize="3xl"
+          color={switchYellowBulueColor}
+          fontFamily="Rajdhani"
+        >
           About
         </Text>
       </Box>
@@ -31,19 +38,24 @@ export const TopAbout = () => {
           <Box m={0}>
             <Text fontFamily="Roboto" fontWeight="bold" fontSize={72} m>
               Hi
-              <Text as="span" color="#ECC94B">
+              <Text as="span" color={switchYellowBulueColor}>
                 .
               </Text>
             </Text>
             <Text fontFamily="Roboto" fontWeight="bold" fontSize={72}>
-              Im Shogo Arai
+              I'm Shogo Arai
             </Text>
           </Box>
           <Box ml={50}>
             <Image src={penguinIcon.src} />
           </Box>
         </Box>
-        <Divider w={20} borderColor="#ECC94B" opacity="1" mb={5} />
+        <Divider
+          w={20}
+          borderColor={switchYellowBulueColor}
+          opacity="1"
+          mb={5}
+        />
         <Box display="flex" justifyContent="left" alignItems="center">
           <svg
             width="30"
@@ -103,8 +115,8 @@ export const TopAbout = () => {
           ml={3}
           mt={3}
           fontFamily="Rajdhani"
-          color="#ECC94B"
-          borderColor="#ECC94B"
+          color={switchYellowBulueColor}
+          borderColor={switchYellowBulueColor}
           variant="outline"
           _hover={{ background: "#ECC94B", color: "#ffffff" }}
         >
@@ -112,7 +124,19 @@ export const TopAbout = () => {
         </Button>
       </Box>
       <Box display="flex" justifyContent="center" alignItems="center">
-        <Image src={arrowIcon.src} />
+        {/* <Image src={arrowIcon.src} /> */}
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.03 16.93L24 33.9L40.97 16.93L38.142 14.1L24 28.244L9.858 14.1L7.03 16.93Z"
+            fill={switchYellowBulueColor}
+          />
+        </svg>
       </Box>
     </Box>
   );

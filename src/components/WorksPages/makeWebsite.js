@@ -17,6 +17,7 @@ export const WorksMakeWebsite = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("#000", "#fff");
   const color = useColorModeValue("#fff", "#000");
+  const switchYellowBulueColor = useColorModeValue("#ECC94B", "#63B3ED");
 
   const styles = {
     slide: {
@@ -51,7 +52,7 @@ export const WorksMakeWebsite = () => {
           <Box m={0}>
             <Text fontFamily="Roboto" fontWeight="bold" fontSize={72} m>
               I Made{" "}
-              <Text as="span" color="#ECC94B">
+              <Text as="span" color={switchYellowBulueColor}>
                 Any{" "}
               </Text>
               <Text
@@ -67,7 +68,7 @@ export const WorksMakeWebsite = () => {
                 fontFamily="Roboto"
                 fontWeight="bold"
                 fontSize={72}
-                color="#ECC94B"
+                color={switchYellowBulueColor}
               >
                 .
               </Text>
@@ -77,7 +78,7 @@ export const WorksMakeWebsite = () => {
                 fontWeight="bold"
                 fontSize={24}
                 ml={24}
-                color="#ECC94B"
+                color={switchYellowBulueColor}
               >
                 Can slide images and can jump to Webpages
               </Text>
@@ -88,7 +89,7 @@ export const WorksMakeWebsite = () => {
           <Divider
             h={500}
             orientation="vertical"
-            borderColor="#ECC94B"
+            borderColor={switchYellowBulueColor}
             opacity="1"
             mr={20}
           />

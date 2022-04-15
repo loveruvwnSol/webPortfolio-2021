@@ -10,6 +10,7 @@ export const Header = () => {
   const bg = useColorModeValue("#000", "#fff");
   const color = useColorModeValue("#fff", "#000");
   const sunMoonSwitch = useColorModeValue(SunIconButton, MoonButtonIcon);
+  const switchYellowBulueColor = useColorModeValue("#ECC94B", "#63B3ED");
 
   return (
     <Box
@@ -26,13 +27,18 @@ export const Header = () => {
       <Link href="/" _hover={{ textDecoration: "none" }}>
         <Text fontSize={44} fontFamily="Roboto" fontWeight="bold">
           Mp
-          <Text as="span" color="#ECC94B">
+          <Text as="span" color={switchYellowBulueColor}>
             .
           </Text>
           2021
         </Text>
       </Link>
-      <Divider w={96} borderColor="#ECC94B" opacity="1" ml={14} />
+      <Divider
+        w={96}
+        borderColor={switchYellowBulueColor}
+        opacity="1"
+        ml={14}
+      />
       <Grid templateColumns="repeat(3, 1fr)" gap={6} ml={14} mr={14}>
         <Text
           fontSize="3xl"

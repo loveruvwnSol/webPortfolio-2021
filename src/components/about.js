@@ -2,7 +2,6 @@ import { Box, Text, Divider } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
 import penguinIcon from "../images/brand/penguinIcon.png";
-// import arrowIcon from "../images/brand/chevron_big_up.svg";
 import { useColorModeValue, useColorMode } from "@chakra-ui/react";
 
 export const TopAbout = () => {
